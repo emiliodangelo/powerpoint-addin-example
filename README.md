@@ -40,4 +40,4 @@ The error can be prevented by waiting some time after adding the new slide and b
 
 ![PowerPoint Online](doc/powerpoint_online_2.png)
 
-It seems like there is a synchronization problem between the add-in JavaScript SDK and PowerPoint Online, where the await in `src/taskpane/components/App.tsx, line 54` is returning the control **before** the slide is actually created. A similar problem occurs with the image placement. In this case, it seems like the callback function at line `src/taskpane/components/App.tsx, line 102` is executed before the slide is actually selected.
+It seems like there is a synchronization problem between the add-in JavaScript SDK and PowerPoint Online, where the await in [App.tsx line 54](src/taskpane/components/App.tsx#L54) is returning the control **before** the slide is actually created. A similar problem occurs with the image placement. In this case, it seems like the callback function at line [App.tsx line 102](src/taskpane/components/App.tsx#L102) is executed before the slide is actually selected.
